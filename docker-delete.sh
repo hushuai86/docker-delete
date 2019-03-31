@@ -48,7 +48,7 @@ else
 	if [ $1 == '-sr' ]; then
 		cd $repositories_dir
 		repositories=`find . -name "_manifests" | cut -b 3-`
-		echo -e "\033[34;1m`${repositories_dir//\/_manifests/""}`\033[0m"
+		echo -e "\033[34;1m${repositories//\/_manifests/}\033[0m"
 		exit 0
 	fi
 
