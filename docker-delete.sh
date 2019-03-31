@@ -133,7 +133,7 @@ else
 		fi
 
 		digest=`ls $tags_dir/$3/index/sha256`
-		digestNum=`find $tags_dir -type d -name "$digest" | awk 'END{print NR}'`
+		digestNum=`find $repositories_dir/*/_manifests/tags -type d -name "$digest" | awk 'END{print NR}'`
 	
 		if [ "$digestNum" == '1' ]; then
 			rm -rf $sha256_dir/$digest
